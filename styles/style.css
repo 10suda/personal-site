@@ -128,7 +128,23 @@ table {
   border-spacing: 0;
 }
 /*CSS RESET END*/
-
+nav {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  margin-inline: 6rem;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+.navbar-header {
+  margin-inline: auto;
+}
+.navbar-main-links {
+  display: flex;
+  gap: 3rem;
+}
 main {
   background-color: red;
 }
