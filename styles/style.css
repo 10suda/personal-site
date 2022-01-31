@@ -128,11 +128,16 @@ table {
   border-spacing: 0;
 }
 /*CSS RESET END*/
+header {
+  border-bottom: 0.2rem solid black;
+}
 nav {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   font-size: 1.5rem;
-  margin-inline: 6rem;
+  margin-block: 2rem;
+  margin-right: 6rem;
 }
 nav a {
   text-decoration: none;
@@ -140,8 +145,11 @@ nav a {
 }
 .navbar-header {
   margin-inline: auto;
+  font-family: "Comforter", cursive;
+  font-size: 3rem;
 }
 .navbar-main-links {
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
+  font-family: "Mochiy Pop P One", sans-serif;
 }
