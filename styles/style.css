@@ -128,6 +128,11 @@ table {
   border-spacing: 0;
 }
 /*CSS RESET END*/
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem; /*temporary gap*/
+}
 header {
   border-bottom: 0.2rem solid black;
 }
@@ -139,9 +144,17 @@ nav {
   margin-block: 2rem;
   margin-right: 6rem;
 }
-nav a {
+.mobile-menu {
+  display: none;
+}
+nav a,
+footer a {
   text-decoration: none;
   color: black;
+}
+nav a:hover,
+footer a:hover {
+  color: rebeccapurple;
 }
 .navbar-header {
   margin-inline: auto;
@@ -152,4 +165,31 @@ nav a {
   display: flex;
   gap: 4rem;
   font-family: "Mochiy Pop P One", sans-serif;
+  text-align: center;
+}
+.active {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.2rem solid black;
+}
+.active:hover {
+  border-bottom: 0.2rem solid rebeccapurple;
+}
+footer {
+  border-top: 0.2rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .social {
+  display: flex;
+  gap: 3rem;
+  margin-block: 2rem;
+  font-size: 3rem;
+}
+footer .social a {
+  text-decoration: none;
+  color: black;
+}
+footer .social a:hover {
+  color: rebeccapurple;
 }
