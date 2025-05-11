@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10Suda</title>
-    <link rel="icon" type="image/x-icon" href="Images/favicon.ico" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <title>10Suda - August Tensuda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +15,327 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
     />
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+         v2.0 | 20110126
+         License: none (public domain)
+      */
+      /*CSS RESET START*/
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      /*CSS RESET END*/
+
+      /* Original styles from style.css */
+      body {
+        display: flex;
+        flex-direction: column;
+        /* gap: 10rem; /* Removed temporary gap, using section margins now */
+        scroll-behavior: smooth; /* Added for smooth scrolling */
+      }
+      header {
+        border-bottom: 0.2rem solid black;
+        position: sticky; /* Make header sticky */
+        top: 0;
+        background-color: white; /* Add background to prevent content overlap */
+        z-index: 1000; /* Ensure header is above other content */
+      }
+      nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 1.5rem;
+        margin-block: 2rem;
+        margin-right: 6rem;
+        margin-left: 6rem; /* Added for balance */
+      }
+      .mobile-menu {
+        display: none; /* Will handle responsiveness later if needed */
+      }
+      nav a,
+      footer a {
+        text-decoration: none;
+        color: black;
+      }
+      nav a:hover,
+      footer a:hover {
+        color: rebeccapurple;
+      }
+      .navbar-header {
+        margin-right: auto; /* Pushes .navbar-main to the right */
+        margin-left: 0; /* Align to left if not enough space from margin-right on nav */
+        font-family: "Comforter", cursive;
+        font-size: 3rem;
+      }
+      .navbar-main-links {
+        display: flex;
+        gap: 4rem;
+        font-family: "Mochiy Pop P One", sans-serif;
+        text-align: center;
+      }
+      .active {
+        padding-bottom: 0.5rem;
+        border-bottom: 0.2rem solid black;
+      }
+      .active:hover {
+        border-bottom: 0.2rem solid rebeccapurple;
+      }
+      footer {
+        border-top: 0.2rem solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0; /* Added padding to footer */
+      }
+      footer .social {
+        display: flex;
+        gap: 3rem;
+        font-size: 3rem;
+      }
+      footer .social a {
+        text-decoration: none;
+        color: black;
+      }
+      footer .social a:hover {
+        color: rebeccapurple;
+      }
+
+      /* Added styles for new content sections */
+      .main-section {
+        padding: 4rem 6rem; /* Increased top/bottom padding */
+        margin-bottom: 1rem; /* Space between sections */
+      }
+
+      .main-section:first-child {
+          margin-top: 2rem; /* Add some space below the sticky header */
+      }
+
+      .main-section h1 { /* Specific for Intro H1 */
+          font-family: "Mochiy Pop P One", sans-serif;
+          font-size: 3rem; 
+          color: rebeccapurple;
+          margin-bottom: 1rem;
+      }
+
+      .main-section h2 {
+        font-size: 2.5rem;
+        font-family: "Mochiy Pop P One", sans-serif;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid rebeccapurple;
+        padding-bottom: 0.5rem;
+        display: inline-block;
+      }
+      
+      .main-section h3 {
+        font-size: 1.8rem; /* Adjusted for Dongle */
+        font-family: "Mochiy Pop P One", sans-serif;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      .main-section p, .main-section li {
+        font-family: "Dongle", sans-serif;
+        font-size: 2rem; /* Dongle font is thin, needs to be larger */
+        line-height: 1.5; /* Adjusted line height for Dongle */
+        margin-bottom: 1rem;
+        color: #555;
+      }
+      
+      .main-section #intro p { /* Specific for Intro paragraph */
+         font-size: 2.2rem; /* Larger for intro paragraph */
+      }
+
+      .main-section ul {
+        list-style-position: inside;
+        padding-left: 0; /* Resetting default padding */
+      }
+      
+      .main-section ul li {
+          margin-bottom: 0.75rem; /* Spacing for list items */
+          list-style-type: disc; /* Add bullets for ul */
+          margin-left: 1.5rem; /* Indent bullet points */
+      }
+       .main-section ul li strong {
+          font-weight: 700; /* Make strong tags in list items bolder for Dongle */
+       }
+
+
+      .project-card {
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-left: 5px solid rebeccapurple;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 8px;
+      }
+      
+      .project-card h3 {
+          margin-top: 0;
+          color: rebeccapurple;
+          font-size: 2rem; /* Adjusted for Dongle in p */
+      }
+
+      #contact a {
+          color: rebeccapurple;
+          text-decoration: none;
+          font-weight: 700; /* Make contact links stand out more with Dongle */
+      }
+      #contact a:hover {
+          text-decoration: underline;
+      }
+
+      /* Responsive adjustments (basic example) */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+          margin-right: 1rem;
+          margin-left: 1rem;
+        }
+        .navbar-header {
+          margin-bottom: 1rem;
+          margin-right: 0; /* Center on mobile */
+        }
+        .navbar-main-links {
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        .main-section {
+          padding: 2rem 1.5rem;
+        }
+        .main-section h1 {
+            font-size: 2.5rem;
+        }
+        .main-section h2 {
+            font-size: 2rem;
+        }
+        .main-section p, .main-section li, .main-section #intro p {
+            font-size: 1.8rem; /* Adjust Dongle for smaller screens */
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -35,16 +354,80 @@
       </nav>
     </header>
     <main>
-      <h1></h1>
+      <section id="intro" class="main-section">
+        <h1>August Tensuda: Turning Complex Data into Playful Insights.</h1>
+        <p>
+          Welcome to my corner of the web! I'm August, an analytics whiz with a knack for transforming data into compelling stories and a passion for creative problem-solving. 
+          I thrive on challenges, whether it's wrangling datasets or (literally) diving into the world of quantum mechanics.
+        </p>
+      </section>
+
+      <section id="about" class="main-section">
+        <h2>About Me</h2>
+        <p>
+          I'm a Data Scientist and Visualization Specialist with a strong academic background and diverse professional experience. My journey has been about precision, curiosity, and a touch of creative flair.
+        </p>
+        <h3>Education Highlights:</h3>
+        <ul>
+          <li><strong>Master of Science in Analytics</strong> from Georgia Institute of Technology (4.0/4.0 GPA)</li>
+          <li><strong>Bachelor of Science (Hons), Physics</strong> from University of Ontario Institute of Technology (Attained a 3.8 GPA in my final four full-time semesters; 3x Dean’s List, 1x President’s List)</li>
+          <li>Fun Fact: I hold the distinction of being the only student at my university to ever take both Quantum Mechanics 1 and 2 concurrently in one semester, earning 4.0 GPAs in both courses! (Talk about a quantum leap!)</li>
+        </ul>
+        <h3>Professional Snapshot:</h3>
+        <p>
+          Currently, as a Data Scientist and Data Visualisation Specialist at Acacia Consulting & Research, I lead the transformation of complex datasets into actionable insights using Tableau, Power BI, and Python. I've had the pleasure of developing interactive dashboards and geo-spatial maps that enhanced data accessibility for over 2000 users, driving a significant improvement in engagement. Before that, I sharpened my skills as a Data Science Intern at Loopio, developing robust gradient boosting models, and as a Data Analyst at Creative Neighbourhoods Inc., where I contributed to tools directing substantial investments in the housing market.
+        </p>
+        <h3>Skills & Superpowers:</h3>
+        <p>
+          My toolkit includes: Python, R, SQL, Git, QGIS, Tableau, PowerBI, and I'm a Lean Six Sigma Greenbelt. I also dabble in web technologies like HTML, CSS, and Javascript, and I'm not afraid to get my hands dirty with C++ and LaTeX. Oh, and I once facilitated an improv workshop for Shopify – "Yes, and..." that was fun!
+        </p>
+      </section>
+
+      <section id="projects" class="main-section">
+        <h2>Project Spotlights</h2>
+        <p>Here are a few highlights where I've made an impact:</p>
+        <div class="project-card">
+          <h3>Data Whisperer at Acacia Consulting & Research</h3>
+          <p>
+            Leading the charge in transforming complex datasets into engaging, actionable insights. My work with Tableau, Power BI, and Python supports the Community Data Program (CDP) and custom Community Analytics projects, making data accessible and driving engagement for 2000+ users.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Model Maestro at Loopio</h3>
+          <p>
+            As a Data Science Intern, I developed gradient boosting models for classifying customer document paragraphs, achieving an impressive average cross-validated F1-score of 0.80. This involved comprehensive data preprocessing, feature reduction, and smart sampling techniques to boost performance.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Investment Navigator at Creative Neighbourhoods Inc.</h3>
+          <p>
+            Collaborated on the development of decision-making tools that were instrumental in directing a $60M CAD investment into the housing market. I also enhanced data accuracy and significantly reduced turnover time by developing automated data pipelines.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="main-section">
+        <h2>Let's Connect!</h2>
+        <p>
+          Got a data puzzle, a project that needs a spark, or just want to talk shop? I'm always looking to improve my skills and/or collaborate with others.
+        </p>
+        <p>
+          You can reach me via <a href="mailto:august.tensuda@gmail.com">email (august.tensuda@gmail.com)</a> or connect with me on <a href="https://www.linkedin.com/in/wyatt-tensuda/" target="_blank">LinkedIn</a>.
+        </p>
+        <p>
+          And don't forget to check out my <a href="https://github.com/10suda" target="_blank">GitHub</a> for more coding adventures!
+        </p>
+        <p>Phone: (226) 501-1264</p>
+      </section>
     </main>
     <footer>
       <div class="social" title="github.com/10suda">
         <a href="https://github.com/10suda" target="_blank"
           ><i class="zmdi zmdi-github-alt"></i></a
         ><a
-          href="mailto:wyatt.tensuda@gmail.com"
+          href="mailto:august.tensuda@gmail.com" 
           target="_blank"
-          title="wyatt.tensuda@gmail.com"
+          title="august.tensuda@gmail.com"
           ><i class="zmdi zmdi-email"></i></a
         ><a
           href="https://www.linkedin.com/in/wyatt-tensuda/"
@@ -54,6 +437,59 @@
         ></a>
       </div>
     </footer>
-    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type
+="text/javascript">
+      //Nav item click handling
+      const navItems = document.querySelectorAll("nav li");
+      const sections = document.querySelectorAll(".main-section");
+
+      // Function to update active nav item based on scroll position
+      function updateActiveNav() {
+        let currentSectionId = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          // Check if section is in viewport (with a 150px offset for better accuracy with sticky header)
+          if (pageYOffset >= sectionTop - sectionHeight / 3 - 150) {
+            currentSectionId = section.getAttribute("id");
+          }
+        });
+
+        navItems.forEach((item) => {
+          item.classList.remove("active");
+          const link = item.querySelector("a");
+          if (link && link.getAttribute("href") === `#${currentSectionId}`) {
+            item.classList.add("active");
+          }
+        });
+      }
+
+      // Set active nav item on click
+      navItems.forEach((item) => {
+        item.addEventListener("click", (event) => {
+          // Prevent default anchor click behavior for a moment if needed for JS scrolling,
+          // but CSS `scroll-behavior: smooth;` handles the scrolling.
+          // setTimeout is used to ensure the class is added after the scroll jump
+          setTimeout(() => {
+            navItems.forEach(i => i.classList.remove("active"));
+            item.classList.add("active");
+          }, 0); // A very short delay, or remove if not needed
+        });
+      });
+      
+      // Update active nav item on page load and on scroll
+      window.addEventListener("load", updateActiveNav);
+      window.addEventListener("scroll", updateActiveNav);
+
+      // Ensure the first item is active on load if no hash is present
+      // and the page is at the top
+      if (window.location.hash === "" && window.pageYOffset < sections[0].offsetTop + sections[0].clientHeight / 2) {
+        navItems.forEach(item => item.classList.remove("active"));
+        if(navItems.length > 0) {
+            navItems[0].classList.add("active");
+        }
+      }
+
+    </script>
   </body>
 </html>
